@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <style>
+            
+            .fieldsetbackground {background:lightyellow}
+			.fieldsetboarder {border:10px solid yellow}
+			.fieldsetmargin {margin-bottom:10px}
+			fieldset {width: 720px}
+			label{
+				width: 180px;
+				display:inline-block;
+				text-align:right;
+				vertical-align:top;
+				}
+		 .checkboxstyle {
+			 width:auto
+			 text-align:right;
+			 vertical-align:top;
+		 }
+		 .textareasize {
+			 width:360px;
+			 height:50px
+		 }
+		 .rangealign {
+			 text-align:center;
+			 width:auto;
+			 color:white;
+		 }
+		 .radioalign {
+			 text-align:center;
+			 display:inline-block;
+			 width:auto;
+		 }
+		 #red {background: red}
+		 #purple {background: purple}
+		 label:hover { font-size:40px }
+		 input:hover { font-size:40px }
+        </style>
+<title>Chris Assignment 1</title>
+</head>
+
+<body>
+<form action="http://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php"
+method="get">
+<h1>Please Enter Your Details For Our Dating Website!</h1>
+<fieldset class="fieldsetbackground fieldsetboarder fieldsetmargin">
+	<legend>Your Face</legend>
+	<label for="avatar">Your Image: </label>
+	<input type="file" id="avatar" name="avatar"/ required="required"><br />
+	<label for="preview">Image Preview: </label><img id="preview">
+</fieldset>
+
+
+<fieldset class="fieldsetbackground fieldsetboarder fieldsetmargin">
+<legend>Your general details</legend>
+	<label for="name">Name:</label>
+ 	<input type="text" name="my_name" required="required" /><br />
+	<label for="gender" class="checkboxstyle">Gender:</label> 
+    <input type="radio" class="checkboxstyle" name="gender" required="required" />
+    <label for="male" class="radioalign">Male</label>
+    <input type="radio" name="gender" required="required" /> 
+    <label for="female" class="radioalign">Female</label><br />
+	<label for="age">Age:</label> <input type="number" required="required" name="age" /><br />
+	<label for="birthdate">Date of birth:</label> <input type="date" name="birthdate" /><br />
+	<label name="color">Favorite  color:  </label><input type="color" name="color" /><br />
+	<label for="country">Which country:</label>
+		<select name="cities">
+            <option value="no">No selection</option>
+            <option value="us">United States</option>
+            <option value="jp">Japan</option>
+            <option value="ch">China</option>
+            <option value="fr">France</option>
+            <option value="it">Italy</option>
+		</select> 
+ 
+</fieldset>
+<fieldset class="fieldsetbackground fieldsetboarder fieldsetmargin">
+<legend>Your Indicators</legend>
+<label for="mood">Height:</label>
+  <label for="short" class="rangealign" id="red">Short</label> 
+  <input type="range" min="0" max="100" step="5" value="50" id="height" name="height"> 
+  <label for"tall" class="rangealign" id="purple">Tall</label><br>
+  <label for="salary">Salary:</label>
+  <label for="poor" class="rangealign" id="red">Poor</label> 
+  <input type="range" min="0" max="100" step="5" value="50" id="salary" name="salary">
+  <label for="rich" class="rangealign" id="purple">Rich</label><br>
+</fieldset>
+<fieldset class="fieldsetbackground fieldsetboarder fieldsetmargin">
+<legend>Your Contact Infomation</legend>
+<label for="my_email">Email:</label>
+ <input type="email" name="email" required="required"/> <br />
+ <label for="my_tel">Mobile:</label>
+ <input type="tel" name="telno"/> <br />
+ <label for="address">Address:</label>
+ <textarea  class="textareasize" name="address" > 
+    </textarea><br />
+ <label for="contact_method">Method to contact you:</label>
+<input type="checkbox" name="contactway" value="email">
+<label for="email" class="radioalign">Email</label>
+<input type="checkbox" name="contactway" value="whatsapp">
+<label for"whatsapp" class="radioalign">Whatsapp </label>
+<input type="checkbox" name="contactway" value="inappchat">
+<label for="inappchat" class="radioalign">In-app chat</label>
+</fieldset>
+<input type="submit" value="Send">
+<script src="https://www.cse.ust.hk/~rossiter/dating_web_site.js"></script>
+</body>
+</html>

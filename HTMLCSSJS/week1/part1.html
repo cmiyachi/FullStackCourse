@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<form action="http://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php"
+method="get">
+<h1>Please Enter Your Details For Our Dating Website!</h1>
+<fieldset>
+	<legend>Your Face</legend>
+	<label for="avatar">Your Image: </label>
+	<input type="file" id="avatar" name="avatar"/ required="required"><br />
+	<label for="preview">Image Preview: </label><img id="preview">
+</fieldset>
+
+
+<fieldset>
+<legend>Your general details</legend>
+	<label for="name">Name:</label>
+ 	<input type="text" name="my_name" required="required" /><br />
+	<label for="gender">Gender:</label> <input type="radio" name="gender" required="required" />Male<input type="radio" name="gender" required="required" /> Female <br />
+	<label for="age">Age:</label> <input type="number" required="required" name="age" /><br />
+	<label for="birthdate">Date of birth:</label> <input type="date" name="birthdate" /><br />
+	Favorite color: <input type="color" /><br />
+	<label for="country">Which country:</label>
+		<select name="cities">
+            <option value="no">No selection</option>
+            <option value="us">United States</option>
+            <option value="jp">Japan</option>
+            <option value="ch">China</option>
+            <option value="fr">France</option>
+            <option value="it">Italy</option>
+		</select> 
+ 
+</fieldset>
+<fieldset>
+<legend>Your Indicators</legend>
+<label for="mood">Height:</label>
+  Short <input type="range" min="0" max="100" step="5" value="50" id="height" name="height"> Tall<br>
+  <label for="mood">Salary:</label>
+  Poor <input type="range" min="0" max="100" step="5" value="50" id="salary" name="salary">Rich<br>
+</fieldset>
+<fieldset>
+<legend>Your Contact Infomation</legend>
+<label for="my_email">Email:</label>
+ <input type="email" name="email" required="required"/> <br />
+ <label for="my_tel">Mobile:</label>
+ <input type="tel" name="telno"/> <br />
+ <label for="address">Address:</label>
+ <textarea  name="address" > 
+    </textarea><br />
+ <label for="contact_method">Method to contact you:</label>
+<input type="checkbox" name="contactway" value="email">Email 
+<input type="checkbox" name="contactway" value="whatsapp">Whatsapp 
+<input type="checkbox" name="contactway" value="inappchat">In-app chat 
+</fieldset>
+<input type="submit" value="Send">
+</body>
+</html>
