@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<style>
+img {position:absolute;}
+div {position:absolute;
+width:500px; height:500px}
+#rightSide { left: 500px;
+            border-left: 1px solid black }
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Matching Game</title>
+</head>
+
+<body id="theBody" onload="generateFaces()">
+<script>
+	var numberOfFaces = 5;
+	var theLeftSide = document.getElementById("leftSide");
+	function generateFaces()
+	{
+		for (var index = 0; index < numberOfFaces; index++)
+		{
+			var random_top = Math.random() * 400;
+        	random_top = Math.floor(random_top);
+			var random_left = Math.random() * 400;
+        	random_left = Math.floor(random_left);
+			var smile_img = document.createElement("img");
+			smile_img.src = "./smile.png";
+			smile_img.style.top = random_top+"px";
+			smile_img.style.left = random_left+"px";
+			theLeftSide = document.getElementById("leftSide");
+			theLeftSide.appendChild(smile_img);
+		}
+		
+	}
+</script>
+<h1>Matching Game</h1>
+<p>Click on the extra smiling face on the left.</p>
+<div id="leftSide"></div>
+
+<div id="rightSide"></div>
+</body>
+</html>
